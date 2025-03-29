@@ -15,10 +15,11 @@ import { RouterLink, RouterOutlet } from '@angular/router';
         <nav class="navbar">
           <ul>
             <li><a routerLink="/">Home</a></li>
-            <li><a href="#">Classes</a></li>
-            <li><a href="#">Weapons</a></li>
-            <li><a href="#">Armor</a></li>
-            <li><a href="#">Feedback</a></li>
+            <li><a routerLink="/players">Players</a></li>
+            <li><a routerLink="/signin">Signin</a></li>
+            <li><a routerLink="/create-character">Character Creator</a></li>
+            <li><a routerLink="/create-guild">Guild Creator</a></li>
+            <li><a routerLink="/character-faction">Character Factions</a></li>
           </ul>
         </nav>
 
@@ -30,10 +31,11 @@ import { RouterLink, RouterOutlet } from '@angular/router';
       <footer class="footer">
         <nav class="footer-nav">
           <a routerLink="/">Home</a> |
-          <a href="#">Classes</a> |
-          <a href="#">Weapons</a> |
-          <a href="#">Armor</a> |
-          <a href="#">Feedback</a>
+          <a routerLink="/players">Players</a> |
+          <a routerLink="/signin">Signin</a> |
+          <a routerLink="/create-character">Character Creator</a> |
+          <a routerLink="/create-guild">Guild Creator</a> |
+          <a routerLink="/character-faction">Character Factions</a>
         </nav>
         <p>&copy; 2025 RPG Character Builder</p>
       </footer>

@@ -20,35 +20,34 @@ import { Component } from '@angular/core';
           <img src="/assets/Classes.png" alt="image of RPG classes" />
           <p>
             So you've decided to put together an RPG adventure.  Arguably the next step is
-            deciding what type of crew you're going to need.  That's where or class recommendations
-            come in handy.  Sure you may have an idea that a thief would come in handy to steal
+            deciding what type of crew you're going to need.  That's where our character creator
+            comes in handy.  Sure you may have an idea that a thief would come in handy to steal
             the crown jewels, but who is going to protect them while they work?  Who do you turn to
-            when one of the group is injured?  Our section on RPG classes can help you build out the
-            perfect troop of characters with the right balance of characteristics needed to succeed
+            when one of the group is injured?  Our character creator can help you build out the
+            perfect troop with the right balance of characteristics needed to succeed
             at your next adventure.
           </p>
         </div>
 
         <div class="highlight">
-          <img src="/assets/Weapons.png" alt="image of RPG weapons" />
+          <img src="/assets/Guilds.png" alt="image of RPG guild" />
           <p>
-            Once you've decided on the makeup of your crew, they are going to need to outfit
-            themselves with the latest weaponry to protect themselves from inevitable perils.
-            Our section on weapons can help you find the optimum protection for your class
-            and budget.  We can also provide you with tips for keeping your weapons in tip-top
-            shape.  Interested in experimenting with magically enhanced weapons?  We can help
-            with that as well!
+            Are you ready to share the skills you’ve been honing with others?  Why not check out our
+            guild creator?  Guilds allow people with similar interests to share what they know with each
+            other.  There are guilds of all types suitable for mages, thieves, merchants, etc.  Many
+            successful adventurers wouldn’t be where they are at today without the help of a guild.  Start
+            yours today and begin reaping the rewards.
           </p>
         </div>
 
         <div class="highlight">
-          <img src="/assets/Armor.png" alt="image of people playing games" />
+          <img src="/assets/Factions.png" alt="image of dwarf faction" />
           <p>
-            While it may be true that the best defense is a good offense, one would be foolish
-            to brave the wilds without at least a modicum of armor.  Our armor section is
-            comprised of the latest information on armor for all class types.  Whether you're
-            a mage or a warrior, we have you covered.  Not only will our information on armor
-            help to keep your character safe, they will look awesome doing it.
+            Have you been thinking of taking your adventures to the next level?  Then it’s time to check
+            out our character factions.  Factions are focused on the big picture.  Maybe you’ve grown
+            tired of orcs going on a rampage and burning down villages…join a faction created for the purpose
+            of dealing with them.  Do you have political aspirations that have gone unrealized due to the meddlings
+            of a particular group of adversaries?  Create your own faction of followers to help get rid of them.
           </p>
         </div>
       </div>
