@@ -46,5 +46,5 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   ]
 })
 export class AppComponent {
-  title = 'rpg-character-builder';
+  title = 'RPG Character Builder';
 }

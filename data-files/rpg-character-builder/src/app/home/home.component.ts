@@ -6,8 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <div>
-      <h1>RPG Character Builder</h1>
-      <h2>The RPG Character Builder is your goto online resource for enhancing gameplay!</h2>
+      <h2>RPG Character Builder is your goto online resource for enhancing gameplay!</h2>
       <p>
         We aim to be the premier online character generator for all of your RPG needs.  Our
         staff have had a long standing passion for RPG games, and we would love to pass our knowledge
