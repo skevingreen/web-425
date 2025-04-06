@@ -26,7 +26,7 @@ describe('AppComponent', () => {
 
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule.withRoutes(routes), //Include RouterTestingModule to handle routing
+        RouterTestingModule.withRoutes(routes), // Include RouterTestingModule to handle routing
         MenuComponent
       ],
       providers: [
