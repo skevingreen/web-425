@@ -50,6 +50,7 @@ import { AuthService } from './auth.service';
         </nav>
         <p>&copy; 2025 RPG Character Builder</p>
       </footer>
+    </div>
   `, styles: [
     `
       .sign-in-container {
