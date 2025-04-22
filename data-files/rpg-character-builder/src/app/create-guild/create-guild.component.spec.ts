@@ -37,4 +37,20 @@ describe('CreateGuildComponent', () => {
 
     expect(component.newGuildForm.valid).toBeTruthy();
   });
+
+  it('should call addToGuildList on form submit with valid data', () => {
+    spyOn(component, 'addToGuildList');
+
+    component.newGuildForm.controls['guildName'].setValue('Ultimate Warriors');
+    component.newGuildForm.controls['description'].setValue('We will crush all that oppose us.');
+    component.newGuildForm.controls['type'].setValue('Competitive');
+    component.newGuildForm.controls['acceptTerms'].setValue(true);
+    component.newGuildForm.controls['notificationPreference'].setValue('SMS');
+    fixture.detectChanges();
+
+    const form = fixture.debugElement.query(By.css('form'));
+    form.triggerEventHandler('ngSubmit', null);
+
+    expect(component.addToGuildList).toHaveBeenCalled();
+  });
 });
