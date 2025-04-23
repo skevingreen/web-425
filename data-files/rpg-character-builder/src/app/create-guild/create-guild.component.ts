@@ -51,7 +51,7 @@ import { CommonModule } from '@angular/common';
 
           <br /><br />
           <input type="checkbox" formControlName="acceptTerms" [(ngModel)]="isChecked"> Accept Terms
-          @if(!isChecked) {
+          @if(!isChecked && newGuildForm.controls['acceptTerms'].dirty) {
             <small class="error">You must accept terms to proceed.</small>
           }
 
