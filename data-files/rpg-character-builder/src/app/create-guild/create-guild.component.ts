@@ -1,4 +1,4 @@
-// https://akhromieiev.com/how-to-determine-check-uncheck-checkbox-event-in-angular/
+// The idea for the checkbox binding came from https://akhromieiev.com/how-to-determine-check-uncheck-checkbox-event-in-angular/
 
 // interface to define Guild properties
 export interface Guild {
@@ -97,10 +97,6 @@ import { CommonModule } from '@angular/common';
     .guild-form {
       flex: 1;
       margin-right: 20px;
-    }
-
-    .guild-list-summary {
-      flex: 1;
     }
 
     label {
