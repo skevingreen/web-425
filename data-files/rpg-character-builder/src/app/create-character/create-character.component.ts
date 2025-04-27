@@ -18,14 +18,15 @@ export interface Class {
   description: string;
 }
 
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { CharacterListComponent } from '../character-list/character-list.component';
 
 @Component({
   selector: 'app-create-character',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, CharacterListComponent],
   template: `
     <div class="character-form-container">
       <form class="character-form" #characterCreationForm="ngForm" (ngSubmit)="addToCharacterList();">
@@ -54,22 +55,7 @@ import { FormsModule, NgForm } from '@angular/forms';
       </form>
 
       <div class="character-list-summary">
-        <h1>Character List Summary</h1>
-
-        @if(characters.length > 0) {
-          <ul>
-            @for(character of characters; track character) {
-              <li>
-                <em>Name: </em>{{character.name}}
-                <em>Gender: </em>{{character.gender}}
-                <em>Class: </em>{{character.characterClass}}
-                <br />
-              </li>
-            }
-          </ul>
-        } @else {
-          <p>No characters added to the list yet.</p>
-        }
+        <app-character-list [characters]="characters"></app-character-list>
       </div>
     </div>
   `,
@@ -122,10 +108,12 @@ import { FormsModule, NgForm } from '@angular/forms';
         margin-bottom: 5px;
       }
 
+      /*
       .character-list-summary li {
         margin-bottom: 10px;
         padding: 5px;
       }
+      */
     `
   ]
 })
@@ -136,6 +124,8 @@ export class CreateCharacterComponent {
   selectedClassId: number;
   characters: Character[];
   name: string;
+
+  @Output() charactersUpdate = new EventEmitter<Character>();
 
   constructor() {
     this.genders = [                  // populate a list of genders for the form selector

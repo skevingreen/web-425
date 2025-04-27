@@ -9,16 +9,17 @@ export interface Guild {
   notificationPreference: string;
 }
 
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { GuildListComponent } from '../guild-list/guild-list.component';
 
 @Component({
   selector: 'app-create-guild',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, GuildListComponent],
   template: `
     <div class="newGuild-form-container">
       <form [formGroup]="newGuildForm" (ngSubmit)="addToGuildList();" class="guild-form">
@@ -66,24 +67,7 @@ import { CommonModule } from '@angular/common';
       </form>
 
       <div class="guild-list-summary">
-        <h1>Guild List Summary</h1>
-
-        @if(guilds.length > 0) {
-          <ul>
-            @for(guild of guilds; track guild) {
-              <li>
-                <em>Guild Name: </em>{{guild.guildName}}
-                <em>Description: </em>{{guild.description}}
-                <em>Type: </em>{{guild.type}}
-                <em>Terms Accepted: </em>{{guild.acceptTerms}}
-                <em>Notification Preference: </em>{{guild.notificationPreference}}
-                <br />
-              </li>
-            }
-          </ul>
-        } @else {
-          <p>No guilds added to the list yet.</p>
-        }
+        <app-guild-list [guilds]="guilds"></app-guild-list>
       </div>
     </div>
   `,
@@ -164,6 +148,8 @@ export class CreateGuildComponent {
     acceptTerms: [null, Validators.compose([Validators.requiredTrue])],
     notificationPreference: [null, Validators.compose([Validators.required])]
   });
+
+  @Output() guildsUpdated = new EventEmitter<Guild>();
 
   constructor(private fb: FormBuilder, private router: Router, private route: ActivatedRoute) {
     this.guilds = [];
