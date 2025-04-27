@@ -27,9 +27,8 @@ import { GuildListComponent } from '../guild-list/guild-list.component';
 
         <fieldset>
           <legend>Guild Options</legend>
-
           <label for="guildName">Name</label>
-          <input formControlName="guildName" type="text" id="guildName" name="guildName">
+          <input formControlName="guildName" type="text" id="guildName" name="guildName" class="guildName">
           @if(newGuildForm.controls['guildName'].touched && newGuildForm.controls['guildName'].hasError('required')) {
             <small class="error">Guild name is required.</small>
           }
@@ -75,12 +74,39 @@ import { GuildListComponent } from '../guild-list/guild-list.component';
     .newGuild-form-container {
       display: flex;
       justify-content: space-between;
-      width: 75%;
+      /*width: 75%;*/
+      gap: 10px;
     }
 
     .guild-form {
       flex: 1;
       margin-right: 20px;
+    }
+
+    .guild-list-summary {
+      flex: 1;
+    }
+
+    fieldset {
+      margin-bottom: 20px;
+    }
+
+    label, select, .guildName {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .guildName, select, input[type="submit"] {
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    select {
+      width: 100%
+    }
+
+    input[type="submit"] {
+        float: right;
     }
 
     label {
@@ -123,10 +149,6 @@ import { GuildListComponent } from '../guild-list/guild-list.component';
     input[type="checkbox"], input[type="radio"] {
       box-sizing: border-box;
       margin-bottom: 10px
-    }
-
-    fieldset {
-      margin-bottom: 20px
     }
 
     .error {
