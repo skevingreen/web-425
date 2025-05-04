@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [CommonModule],
   template: `
+    <h1>Hello</h1>
     @if(dailySpecial) {
       <div class="dspecial-container">
         <h1>{{ dailySpecial.day }}'s Daily Special</h1>
